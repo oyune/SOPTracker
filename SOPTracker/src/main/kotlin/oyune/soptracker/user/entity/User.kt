@@ -3,9 +3,10 @@ package oyune.soptracker.user.entity
 import jakarta.persistence.*
 import oyune.soptracker.enums.DepType
 
-@Entity(name="user")
-class UserEntity(
-        @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+@Entity(name = "user")
+class User(
+        @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
         val userNum: Long,
 
         @Column(nullable = false, unique = false)
@@ -17,4 +18,6 @@ class UserEntity(
         @Column(nullable = false, unique = false)
         @Enumerated(EnumType.STRING)
         val depName: DepType,
-){}
+        
+) {
+}
