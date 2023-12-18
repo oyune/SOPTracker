@@ -1,5 +1,7 @@
 package oyune.soptracker.user.dto
 
+import oyune.soptracker.enums.DepType
+
 data class UserRegistrationRequestDto(
         /**
          * 사원 이름
@@ -16,7 +18,7 @@ data class UserRegistrationRequestDto(
         /**
          * 부서명
          */
-        val depName: String,
+        val depName: DepType    ,
 )
 
 data class UserRegistrationResponseDto(
